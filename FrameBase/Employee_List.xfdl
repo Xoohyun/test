@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <FDL version="2.1">
   <Form id="Employee_List" width="1050" height="736" titletext="Employee List">
     <Layouts>
@@ -39,7 +39,7 @@
                   </Layout>
                 </Layouts>
               </Div>
-              <Grid id="grdList" left="0" top="30" right="0" bottom="0" binddataset="viewdataset" autofittype="none">
+              <Grid id="grdList" left="25" top="30" right="-25" bottom="30" binddataset="viewdataset" autofittype="none">
                 <Formats>
                   <Format id="default">
                     <Columns>
@@ -379,7 +379,7 @@
             <Col id="POSITION">팀원</Col>
             <Col id="GROUPS">책임</Col>
             <Col id="JOIN_DATE">20140307</Col>
-            <Col id="TELNUM">0211542356 </Col>
+            <Col id="TELNUM">0211542356</Col>
             <Col id="PHONE">01012140522</Col>
             <Col id="POSTAL_CODE">63534</Col>
             <Col id="ADRESS1">제주특별자치도 서귀포시 가가로 14</Col>
@@ -492,7 +492,7 @@
             <Col id="POSITION">팀원</Col>
             <Col id="GROUPS">선임</Col>
             <Col id="JOIN_DATE">20140307</Col>
-            <Col id="TELNUM">0211542356 </Col>
+            <Col id="TELNUM">0211542356</Col>
             <Col id="PHONE">01012140522</Col>
             <Col id="POSTAL_CODE">63534</Col>
             <Col id="ADRESS1">제주특별자치도 서귀포시 가가로 14</Col>
@@ -661,7 +661,8 @@ this.Master_grdList_onselectchanged = function(obj:nexacro.Grid,e:nexacro.GridSe
 {
 	
 };
-]]></Script>
+]]>
+    </Script>
     <Trigger/>
   </Form>
 </FDL>
