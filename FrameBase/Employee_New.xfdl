@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <FDL version="2.1">
   <Form id="add" width="700" height="450" titletext="Popup" statustext="사용자 검색 팝업">
     <Layouts>
@@ -33,7 +33,7 @@
               <Edit id="edtGroups" left="439" top="101" width="225" height="24" cssclass=""/>
               <Static id="staJoinDateBg" left="0" top="129" width="335" height="34" cssclass="sta_fieldbox"/>
               <Static id="staJoinDateLabel" left="0" top="129" width="100" height="34" text="입사일" cssclass="sta_labelbox"/>
-              <Edit id="edtJoinDate" left="105" top="134" width="225" height="24" cssclass=""/>
+              <Edit id="edtJoinDate" left="223" top="126" width="225" height="24" cssclass=""/>
               <Static id="staBreakDateBg" left="334" top="129" width="335" height="34" cssclass="sta_fieldbox"/>
               <Static id="staBreakDateLabel" left="334" top="129" width="100" height="34" text="퇴사일" cssclass="sta_labelbox"/>
               <Edit id="edtBreakDate" left="439" top="134" width="225" height="24" cssclass=""/>
@@ -133,6 +133,7 @@ this.btnCancel_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	this.close();
 };
-]]></Script>
+]]>
+    </Script>
   </Form>
 </FDL>
