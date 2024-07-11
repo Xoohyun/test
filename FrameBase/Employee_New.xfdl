@@ -45,7 +45,7 @@
               <Edit id="edtPhone" left="439" top="167" width="225" height="24" cssclass=""/>
               <Static id="staPostalCodeBg" left="0" top="195" width="335" height="34" cssclass="sta_fieldbox"/>
               <Static id="staPostalCodeLabel" left="0" top="195" width="100" height="34" text="우편번호" cssclass="sta_labelbox"/>
-              <Edit id="edtPostalCode" left="105" top="200" width="225" height="24" cssclass=""/>
+              <Edit id="edtPostalCode" left="240" top="118" width="225" height="24" cssclass=""/>
               <Static id="staAdress1Bg" left="334" top="195" width="335" height="34" cssclass="sta_fieldbox"/>
               <Static id="staAdress1Label" left="334" top="195" width="100" height="34" text="주소" cssclass="sta_labelbox"/>
               <Edit id="edtAdress1" left="439" top="200" width="225" height="24" cssclass=""/>
