@@ -4,7 +4,7 @@
     <Layouts>
       <Layout width="1050" height="736">
         <View id="Search" taborder="2" viewtype="FreeForm" viewdataset="viewdataset" text="Search" left="10" onclick="search_onclick" sourceview="Search" height="50" top="52" width="1030"/>
-        <View id="Master" taborder="1" viewtype="FreeForm" viewdataset="viewdataset" text="Master (1)" left="165" sourceview="Master" width="510" top="Search:-42" height="564"/>
+        <View id="Master" taborder="1" viewtype="FreeForm" viewdataset="viewdataset" text="Master (1)" left="115" sourceview="Master" width="510" top="Search:-76" height="564"/>
         <Static id="staCount" taborder="0" text="Bottom 영역 텍스트" left="10" border="1px solid #dddddd,0px none,0px none" height="50" top="Master:10" width="1030"/>
         <View id="Detail" taborder="3" viewtype="GridView" viewdataset="viewdataset" text="Detail (n)" sourceview="Detail" width="510" left="Master:10" top="Search:10" height="564"/>
         <Div id="divTop" taborder="4" text="Div00" left="10" top="0" height="52" width="1030" border="0px none,0px none,1px solid #dddddd">
