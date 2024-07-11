@@ -31,7 +31,7 @@
               <Static id="staGroupsBg" left="334" top="96" width="335" height="34" cssclass="sta_fieldbox"/>
               <Static id="staGroupsLabel" left="334" top="96" width="100" height="34" text="구분(직무)" cssclass="sta_labelbox"/>
               <Edit id="edtGroups" left="439" top="101" width="225" height="24" cssclass=""/>
-              <Static id="staJoinDateBg" left="0" top="129" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staJoinDateBg" left="85" top="109" width="335" height="34" cssclass="sta_fieldbox"/>
               <Static id="staJoinDateLabel" left="0" top="129" width="100" height="34" text="입사일" cssclass="sta_labelbox"/>
               <Edit id="edtJoinDate" left="223" top="126" width="225" height="24" cssclass=""/>
               <Static id="staBreakDateBg" left="334" top="129" width="335" height="34" cssclass="sta_fieldbox"/>
