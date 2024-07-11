@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ADL version="2.0">
+  <Application id="t2" screenid="Desktop_screen">
+    <Layout>
+      <MainFrame id="mainframe">
+        <ChildFrame id="WorkFrame" formurl="FrameBase::Employee_List.xfdl"/>
+      </MainFrame>
+    </Layout>
+    <Style url="xcssrc::sample.xcss"/>
+  </Application>
+</ADL>

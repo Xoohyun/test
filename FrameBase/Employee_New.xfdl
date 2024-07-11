@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="add" width="700" height="450" titletext="Popup" statustext="사용자 검색 팝업">
+    <Layouts>
+      <Layout height="450" mobileorientation="landscape" width="700">
+        <View id="Detail" taborder="0" text="Detail" viewdataset="viewdataset" left="10" top="10" sourceview="Detail" viewtype="GridView" visible="true" width="680" bottom="60">
+          <Layouts>
+            <Layout>
+              <Div id="divTitle" left="0" top="0" height="30" right="0">
+                <Layouts>
+                  <Layout>
+                    <Static id="staTitle" left="0" top="0" height="30" width="120" text="&lt;타이틀 텍스트&gt;" fittocontents="none" cssclass="sta_subtitle"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Static id="staEmployeeCodeBg" left="0" top="30" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staEmployeeCodeLabel" left="0" top="30" width="100" height="34" text="직원코드" cssclass="sta_labelbox"/>
+              <Edit id="edtEmployeeCode" left="105" top="35" width="225" height="24" cssclass=""/>
+              <Static id="staEmployeeNameBg" left="334" top="30" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staEmployeeNameLabel" left="334" top="30" width="100" height="34" text="직원명" cssclass="sta_labelbox"/>
+              <Edit id="edtEmployeeName" left="439" top="35" width="225" height="24" cssclass=""/>
+              <Static id="staSexBg" left="0" top="63" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staSexLabel" left="0" top="63" width="100" height="34" text="성별" cssclass="sta_labelbox"/>
+              <Edit id="edtSex" left="105" top="68" width="225" height="24" cssclass=""/>
+              <Static id="staDepartmentBg" left="334" top="63" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staDepartmentLabel" left="334" top="63" width="100" height="34" text="부서" cssclass="sta_labelbox"/>
+              <Edit id="edtDepartment" left="439" top="68" width="225" height="24" cssclass=""/>
+              <Static id="staPositionBg" left="0" top="96" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staPositionLabel" left="0" top="96" width="100" height="34" text="직급" cssclass="sta_labelbox"/>
+              <Edit id="edtPosition" left="105" top="101" width="225" height="24" cssclass=""/>
+              <Static id="staGroupsBg" left="334" top="96" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staGroupsLabel" left="334" top="96" width="100" height="34" text="구분(직무)" cssclass="sta_labelbox"/>
+              <Edit id="edtGroups" left="439" top="101" width="225" height="24" cssclass=""/>
+              <Static id="staJoinDateBg" left="0" top="129" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staJoinDateLabel" left="0" top="129" width="100" height="34" text="입사일" cssclass="sta_labelbox"/>
+              <Edit id="edtJoinDate" left="105" top="134" width="225" height="24" cssclass=""/>
+              <Static id="staBreakDateBg" left="334" top="129" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staBreakDateLabel" left="334" top="129" width="100" height="34" text="퇴사일" cssclass="sta_labelbox"/>
+              <Edit id="edtBreakDate" left="439" top="134" width="225" height="24" cssclass=""/>
+              <Static id="staTelnumBg" left="0" top="162" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staTelnumLabel" left="0" top="162" width="100" height="34" text="전화번호" cssclass="sta_labelbox"/>
+              <Edit id="edtTelnum" left="105" top="167" width="225" height="24" cssclass=""/>
+              <Static id="staPhoneBg" left="334" top="162" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staPhoneLabel" left="334" top="162" width="100" height="34" text="핸드폰번호" cssclass="sta_labelbox"/>
+              <Edit id="edtPhone" left="439" top="167" width="225" height="24" cssclass=""/>
+              <Static id="staPostalCodeBg" left="0" top="195" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staPostalCodeLabel" left="0" top="195" width="100" height="34" text="우편번호" cssclass="sta_labelbox"/>
+              <Edit id="edtPostalCode" left="105" top="200" width="225" height="24" cssclass=""/>
+              <Static id="staAdress1Bg" left="334" top="195" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staAdress1Label" left="334" top="195" width="100" height="34" text="주소" cssclass="sta_labelbox"/>
+              <Edit id="edtAdress1" left="439" top="200" width="225" height="24" cssclass=""/>
+              <Static id="staAdress2Bg" left="0" top="228" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staAdress2Label" left="0" top="228" width="100" height="34" text="상세주소" cssclass="sta_labelbox"/>
+              <Edit id="edtAdress2" left="105" top="233" width="225" height="24" cssclass=""/>
+              <Static id="staMemoBg" left="334" top="228" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staMemoLabel" left="334" top="228" width="100" height="34" text="메모" cssclass="sta_labelbox"/>
+              <Edit id="edtMemo" left="439" top="233" width="225" height="24" cssclass=""/>
+              <Static id="staEmployeeStatusBg" left="0" top="261" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staEmployeeStatusLabel" left="0" top="261" width="100" height="34" text="재직여부" cssclass="sta_labelbox"/>
+              <Edit id="edtEmployeeStatus" left="105" top="266" width="225" height="24" cssclass=""/>
+              <Static id="staEmailBg" left="334" top="261" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staEmailLabel" left="334" top="261" width="100" height="34" text="이메일" cssclass="sta_labelbox"/>
+              <Edit id="edtEmail" left="439" top="266" width="225" height="24" cssclass=""/>
+              <Static id="staPhotoBg" left="0" top="294" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staPhotoLabel" left="0" top="294" width="100" height="34" text="사진" cssclass="sta_labelbox"/>
+              <Edit id="edtPhoto" left="105" top="299" width="225" height="24" cssclass=""/>
+              <Static id="staCareerlistBg" left="334" top="294" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staCareerlistLabel" left="334" top="294" width="100" height="34" text="이력사항" cssclass="sta_labelbox"/>
+              <Edit id="edtCareerlist" left="439" top="299" width="225" height="24" cssclass=""/>
+            </Layout>
+          </Layouts>
+          <Objects>
+            <Dataset id="viewdataset">
+              <ColumnInfo>
+                <Column id="EMPLOYEE_CODE" type="STRING" size="20" description="직원코드"/>
+                <Column id="EMPLOYEE_NAME" type="STRING" size="20" description="직원명"/>
+                <Column id="SEX" type="STRING" size="20" description="성별"/>
+                <Column id="DEPARTMENT" type="STRING" size="20" description="부서"/>
+                <Column id="POSITION" type="STRING" size="20" description="직급"/>
+                <Column id="GROUPS" type="STRING" size="20" description="구분(직무)"/>
+                <Column id="JOIN_DATE" type="STRING" size="20" description="입사일"/>
+                <Column id="BREAK_DATE" type="STRING" size="20" description="퇴사일"/>
+                <Column id="TELNUM" type="STRING" size="20" description="전화번호"/>
+                <Column id="PHONE" type="STRING" size="20" description="핸드폰번호"/>
+                <Column id="POSTAL_CODE" type="STRING" size="20" description="우편번호"/>
+                <Column id="ADRESS1" type="STRING" size="20" description="주소"/>
+                <Column id="ADRESS2" type="STRING" size="20" description="상세주소"/>
+                <Column id="MEMO" type="STRING" size="20" description="메모"/>
+                <Column id="EMPLOYEE_STATUS" type="STRING" size="20" description="재직여부"/>
+                <Column id="EMAIL" type="STRING" size="20" description="이메일"/>
+                <Column id="PHOTO" type="STRING" size="20" description="사진"/>
+                <Column id="CAREERLIST" type="STRING" size="20" description="이력사항"/>
+              </ColumnInfo>
+              <Rows>
+                <Row/>
+              </Rows>
+            </Dataset>
+          </Objects>
+          <Bind>
+            <Bind>
+              <BindItem id="bind_edtEmployeeCode" compid="edtEmployeeCode" propid="value" datasetid="viewdataset" columnid="EMPLOYEE_CODE"/>
+              <BindItem id="bind_edtEmployeeName" compid="edtEmployeeName" propid="value" datasetid="viewdataset" columnid="EMPLOYEE_NAME"/>
+              <BindItem id="bind_edtSex" compid="edtSex" propid="value" datasetid="viewdataset" columnid="SEX"/>
+              <BindItem id="bind_edtDepartment" compid="edtDepartment" propid="value" datasetid="viewdataset" columnid="DEPARTMENT"/>
+              <BindItem id="bind_edtPosition" compid="edtPosition" propid="value" datasetid="viewdataset" columnid="POSITION"/>
+              <BindItem id="bind_edtGroups" compid="edtGroups" propid="value" datasetid="viewdataset" columnid="GROUPS"/>
+              <BindItem id="bind_edtJoinDate" compid="edtJoinDate" propid="value" datasetid="viewdataset" columnid="JOIN_DATE"/>
+              <BindItem id="bind_edtBreakDate" compid="edtBreakDate" propid="value" datasetid="viewdataset" columnid="BREAK_DATE"/>
+              <BindItem id="bind_edtTelnum" compid="edtTelnum" propid="value" datasetid="viewdataset" columnid="TELNUM"/>
+              <BindItem id="bind_edtPhone" compid="edtPhone" propid="value" datasetid="viewdataset" columnid="PHONE"/>
+              <BindItem id="bind_edtPostalCode" compid="edtPostalCode" propid="value" datasetid="viewdataset" columnid="POSTAL_CODE"/>
+              <BindItem id="bind_edtAdress1" compid="edtAdress1" propid="value" datasetid="viewdataset" columnid="ADRESS1"/>
+              <BindItem id="bind_edtAdress2" compid="edtAdress2" propid="value" datasetid="viewdataset" columnid="ADRESS2"/>
+              <BindItem id="bind_edtMemo" compid="edtMemo" propid="value" datasetid="viewdataset" columnid="MEMO"/>
+              <BindItem id="bind_edtEmployeeStatus" compid="edtEmployeeStatus" propid="value" datasetid="viewdataset" columnid="EMPLOYEE_STATUS"/>
+              <BindItem id="bind_edtEmail" compid="edtEmail" propid="value" datasetid="viewdataset" columnid="EMAIL"/>
+              <BindItem id="bind_edtPhoto" compid="edtPhoto" propid="value" datasetid="viewdataset" columnid="PHOTO"/>
+              <BindItem id="bind_edtCareerlist" compid="edtCareerlist" propid="value" datasetid="viewdataset" columnid="CAREERLIST"/>
+            </Bind>
+          </Bind>
+          <InitValue/>
+        </View>
+        <Button id="btnCancel" taborder="2" text="취소" top="Detail:20" width="50" height="28" left="640" onclick="btnCancel_onclick"/>
+        <Button id="btnOK" taborder="1" text="확인" height="28" right="btnCancel:5" width="50" top="Detail:20" onclick="btnOK_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.btnOK_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close();
+};
+
+this.btnCancel_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close();
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="MasterDetail_1N_H" width="1050" height="736" titletext="3. MasterDetail_1:N (H)">
+    <Layouts>
+      <Layout width="1050" height="736">
+        <View id="Search" taborder="2" viewtype="FreeForm" viewdataset="viewdataset" text="Search" left="10" onclick="search_onclick" sourceview="Search" height="50" top="52" width="1030"/>
+        <View id="Master" taborder="1" viewtype="FreeForm" viewdataset="viewdataset" text="Master (1)" left="10" sourceview="Master" width="510" top="Search:10" height="564"/>
+        <Static id="staCount" taborder="0" text="Bottom 영역 텍스트" left="10" border="1px solid #dddddd,0px none,0px none" height="50" top="Master:10" width="1030"/>
+        <View id="Detail" taborder="3" viewtype="GridView" viewdataset="viewdataset" text="Detail (n)" sourceview="Detail" width="510" left="Master:10" top="Search:10" height="564"/>
+        <Div id="divTop" taborder="4" text="Div00" left="10" top="0" height="52" width="1030" border="0px none,0px none,1px solid #dddddd">
+          <Layouts>
+            <Layout>
+              <Button id="btnAdd" taborder="0" text="신규" top="12" height="28" width="48" right="53"/>
+              <Button id="btnDel" taborder="1" text="삭제" top="12" height="28" width="48" right="106"/>
+              <Button id="btnSave" taborder="2" text="저장" top="12" height="28" enable="true" width="48" right="0"/>
+              <Button id="btnUpdate" taborder="3" text="수정" top="12" height="28" width="48" right="159"/>
+              <Static id="staNavi" taborder="4" text="상단메뉴 &gt; 2뎁스 메뉴 &gt; 업무화면 타이틀" top="14" width="270" height="24" left="0"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[]]>
+    </Script>
+    <Trigger/>
+  </Form>
+</FDL>

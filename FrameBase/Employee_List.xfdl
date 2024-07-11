@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Employee_List" width="1050" height="736" titletext="Employee List">
+    <Layouts>
+      <Layout width="1050" height="736">
+        <View id="Search" taborder="2" viewtype="FreeForm" viewdataset="viewdataset" text="Search" left="10" sourceview="Search" height="50" top="52" width="1030">
+          <Layouts>
+            <Layout>
+              <Static id="stBg" left="0" top="0" right="0" bottom="0" cssclass="sta_searchbox"/>
+              <Button id="btnSearch" width="100" height="30" right="10" bottom="10" cssclass="btn_search" text="조회" onclick="Search_btnSearch_onclick"/>
+              <Static id="staEmployeeNameLabel" left="10" top="10" width="86" height="24" text="직원명" cssclass="sta_label"/>
+              <Edit id="edtEmployeeName" left="96" top="10" width="115" height="24" cssclass=""/>
+            </Layout>
+          </Layouts>
+          <Objects>
+            <Dataset id="viewdataset">
+              <ColumnInfo>
+                <Column id="EMPLOYEE_NAME" type="STRING" size="20" description="직원명"/>
+              </ColumnInfo>
+              <Rows>
+                <Row/>
+              </Rows>
+            </Dataset>
+          </Objects>
+          <Bind>
+            <Bind>
+              <BindItem id="bind_edtEmployeeName" compid="edtEmployeeName" propid="value" datasetid="viewdataset" columnid="EMPLOYEE_NAME"/>
+            </Bind>
+          </Bind>
+          <InitValue/>
+        </View>
+        <View id="Master" taborder="1" viewtype="FreeForm" viewdataset="viewdataset" text="Master (1)" left="10" width="510" top="Search:10" height="564">
+          <Layouts>
+            <Layout>
+              <Div id="divTitle" left="0" top="0" height="30" right="0">
+                <Layouts>
+                  <Layout>
+                    <Static id="staTitle" left="0" top="0" height="30" width="120" text="&lt;타이틀 텍스트&gt;" fittocontents="none" cssclass="sta_subtitle"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Grid id="grdList" left="0" top="30" right="0" bottom="0" binddataset="viewdataset" autofittype="none">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                      <Column size="80" band="body"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="32" band="head"/>
+                      <Row size="32" band="body"/>
+                      <Row size="37" band="summ"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell id="cell_head_0_0_EMPLOYEE_CODE" col="0" row="0" text="직원코드" cssclass=""/>
+                      <Cell id="cell_head_1_0_EMPLOYEE_NAME" col="1" row="0" text="직원명" cssclass=""/>
+                      <Cell id="cell_head_2_0_SEX" col="2" row="0" text="성별" cssclass=""/>
+                      <Cell id="cell_head_3_0_DEPARTMENT" col="3" row="0" text="부서" cssclass=""/>
+                      <Cell id="cell_head_4_0_POSITION" col="4" row="0" text="직급" cssclass=""/>
+                      <Cell id="cell_head_5_0_GROUPS" col="5" row="0" text="구분(직무)" cssclass=""/>
+                      <Cell id="cell_head_6_0_JOIN_DATE" col="6" row="0" text="입사일" cssclass=""/>
+                      <Cell id="cell_head_7_0_BREAK_DATE" col="7" row="0" text="퇴사일" cssclass=""/>
+                      <Cell id="cell_head_8_0_TELNUM" col="8" row="0" text="전화번호" cssclass=""/>
+                      <Cell id="cell_head_9_0_PHONE" col="9" row="0" text="핸드폰번호" cssclass=""/>
+                      <Cell id="cell_head_10_0_POSTAL_CODE" col="10" row="0" text="우편번호" cssclass=""/>
+                      <Cell id="cell_head_11_0_ADRESS1" col="11" row="0" text="주소" cssclass=""/>
+                      <Cell id="cell_head_12_0_ADRESS2" col="12" row="0" text="상세주소" cssclass=""/>
+                      <Cell id="cell_head_13_0_MEMO" col="13" row="0" text="메모" cssclass=""/>
+                      <Cell id="cell_head_14_0_EMPLOYEE_STATUS" col="14" row="0" text="재직여부" cssclass=""/>
+                      <Cell id="cell_head_15_0_EMAIL" col="15" row="0" text="이메일" cssclass=""/>
+                      <Cell id="cell_head_16_0_PHOTO" col="16" row="0" text="사진" cssclass=""/>
+                      <Cell id="cell_head_17_0_CAREERLIST" col="17" row="0" text="이력사항" cssclass=""/>
+                    </Band>
+                    <Band id="body">
+                      <Cell id="cell_body_0_0_EMPLOYEE_CODE" col="0" row="0" text="bind:EMPLOYEE_CODE" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_1_0_EMPLOYEE_NAME" col="1" row="0" text="bind:EMPLOYEE_NAME" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_2_0_SEX" col="2" row="0" text="bind:SEX" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_3_0_DEPARTMENT" col="3" row="0" text="bind:DEPARTMENT" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_4_0_POSITION" col="4" row="0" text="bind:POSITION" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_5_0_GROUPS" col="5" row="0" text="bind:GROUPS" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_6_0_JOIN_DATE" col="6" row="0" text="bind:JOIN_DATE" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_7_0_BREAK_DATE" col="7" row="0" text="bind:BREAK_DATE" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_8_0_TELNUM" col="8" row="0" text="bind:TELNUM" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_9_0_PHONE" col="9" row="0" text="bind:PHONE" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_10_0_POSTAL_CODE" col="10" row="0" text="bind:POSTAL_CODE" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_11_0_ADRESS1" col="11" row="0" text="bind:ADRESS1" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_12_0_ADRESS2" col="12" row="0" text="bind:ADRESS2" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_13_0_MEMO" col="13" row="0" text="bind:MEMO" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_14_0_EMPLOYEE_STATUS" col="14" row="0" text="bind:EMPLOYEE_STATUS" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_15_0_EMAIL" col="15" row="0" text="bind:EMAIL" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_16_0_PHOTO" col="16" row="0" text="bind:PHOTO" displaytype="normal" edittype="none" cssclass=""/>
+                      <Cell id="cell_body_17_0_CAREERLIST" col="17" row="0" text="bind:CAREERLIST" displaytype="normal" edittype="none" cssclass=""/>
+                    </Band>
+                    <Band id="summary">
+                      <Cell id="cell_summ_EMPLOYEE_CODE" col="0" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_EMPLOYEE_NAME" col="1" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_SEX" col="2" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_DEPARTMENT" col="3" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_POSITION" col="4" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_GROUPS" col="5" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_JOIN_DATE" col="6" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_BREAK_DATE" col="7" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_TELNUM" col="8" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_PHONE" col="9" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_POSTAL_CODE" col="10" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_ADRESS1" col="11" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_ADRESS2" col="12" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_MEMO" col="13" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_EMPLOYEE_STATUS" col="14" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_EMAIL" col="15" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_PHOTO" col="16" row="0" text="" displaytype="normal"/>
+                      <Cell id="cell_summ_CAREERLIST" col="17" row="0" text="" displaytype="normal"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+            </Layout>
+          </Layouts>
+          <Objects>
+            <Dataset id="viewdataset">
+              <ColumnInfo>
+                <Column id="EMPLOYEE_CODE" type="STRING" size="20" description="직원코드"/>
+                <Column id="EMPLOYEE_NAME" type="STRING" size="20" description="직원명"/>
+                <Column id="SEX" type="STRING" size="20" description="성별"/>
+                <Column id="DEPARTMENT" type="STRING" size="20" description="부서"/>
+                <Column id="POSITION" type="STRING" size="20" description="직급"/>
+                <Column id="GROUPS" type="STRING" size="20" description="구분(직무)"/>
+                <Column id="JOIN_DATE" type="STRING" size="20" description="입사일"/>
+                <Column id="BREAK_DATE" type="STRING" size="20" description="퇴사일"/>
+                <Column id="TELNUM" type="STRING" size="20" description="전화번호"/>
+                <Column id="PHONE" type="STRING" size="20" description="핸드폰번호"/>
+                <Column id="POSTAL_CODE" type="STRING" size="20" description="우편번호"/>
+                <Column id="ADRESS1" type="STRING" size="20" description="주소"/>
+                <Column id="ADRESS2" type="STRING" size="20" description="상세주소"/>
+                <Column id="MEMO" type="STRING" size="20" description="메모"/>
+                <Column id="EMPLOYEE_STATUS" type="STRING" size="20" description="재직여부"/>
+                <Column id="EMAIL" type="STRING" size="20" description="이메일"/>
+                <Column id="PHOTO" type="STRING" size="20" description="사진"/>
+                <Column id="CAREERLIST" type="STRING" size="20" description="이력사항"/>
+              </ColumnInfo>
+              <Rows/>
+            </Dataset>
+          </Objects>
+          <InitValue/>
+        </View>
+        <Static id="staCount" taborder="0" text="Bottom 영역 텍스트" left="10" border="1px solid #dddddd,0px none,0px none" height="50" top="Master:10" width="1030"/>
+        <View id="Detail" taborder="3" viewtype="GridView" viewdataset="viewdataset" text="Detail (n)" sourceview="Master" width="510" left="Master:10" top="Search:10" height="564">
+          <Layouts>
+            <Layout>
+              <Div id="divTitle" left="0" top="0" height="30" right="0">
+                <Layouts>
+                  <Layout>
+                    <Static id="staTitle" left="0" top="0" height="30" width="120" text="&lt;타이틀 텍스트&gt;" fittocontents="none" cssclass="sta_subtitle"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Static id="staEmployeeCodeBg" left="0" top="30" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staEmployeeCodeLabel" left="0" top="30" width="100" height="34" text="직원코드" cssclass="sta_labelbox"/>
+              <Edit id="edtEmployeeCode" left="105" top="35" width="140" height="24" cssclass=""/>
+              <Static id="staEmployeeNameBg" left="249" top="30" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staEmployeeNameLabel" left="249" top="30" width="100" height="34" text="직원명" cssclass="sta_labelbox"/>
+              <Edit id="edtEmployeeName" left="354" top="35" width="140" height="24" cssclass=""/>
+              <Static id="staSexBg" left="0" top="63" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staSexLabel" left="0" top="63" width="100" height="34" text="성별" cssclass="sta_labelbox"/>
+              <Edit id="edtSex" left="105" top="68" width="140" height="24" cssclass=""/>
+              <Static id="staDepartmentBg" left="249" top="63" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staDepartmentLabel" left="249" top="63" width="100" height="34" text="부서" cssclass="sta_labelbox"/>
+              <Edit id="edtDepartment" left="354" top="68" width="140" height="24" cssclass=""/>
+              <Static id="staPositionBg" left="0" top="96" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staPositionLabel" left="0" top="96" width="100" height="34" text="직급" cssclass="sta_labelbox"/>
+              <Edit id="edtPosition" left="105" top="101" width="140" height="24" cssclass=""/>
+              <Static id="staGroupsBg" left="249" top="96" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staGroupsLabel" left="249" top="96" width="100" height="34" text="구분(직무)" cssclass="sta_labelbox"/>
+              <Edit id="edtGroups" left="354" top="101" width="140" height="24" cssclass=""/>
+              <Static id="staJoinDateBg" left="0" top="129" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staJoinDateLabel" left="0" top="129" width="100" height="34" text="입사일" cssclass="sta_labelbox"/>
+              <Edit id="edtJoinDate" left="105" top="134" width="140" height="24" cssclass=""/>
+              <Static id="staBreakDateBg" left="249" top="129" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staBreakDateLabel" left="249" top="129" width="100" height="34" text="퇴사일" cssclass="sta_labelbox"/>
+              <Edit id="edtBreakDate" left="354" top="134" width="140" height="24" cssclass=""/>
+              <Static id="staTelnumBg" left="0" top="162" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staTelnumLabel" left="0" top="162" width="100" height="34" text="전화번호" cssclass="sta_labelbox"/>
+              <Edit id="edtTelnum" left="105" top="167" width="140" height="24" cssclass=""/>
+              <Static id="staPhoneBg" left="249" top="162" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staPhoneLabel" left="249" top="162" width="100" height="34" text="핸드폰번호" cssclass="sta_labelbox"/>
+              <Edit id="edtPhone" left="354" top="167" width="140" height="24" cssclass=""/>
+              <Static id="staPostalCodeBg" left="0" top="195" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staPostalCodeLabel" left="0" top="195" width="100" height="34" text="우편번호" cssclass="sta_labelbox"/>
+              <Edit id="edtPostalCode" left="105" top="200" width="140" height="24" cssclass=""/>
+              <Static id="staAdress1Bg" left="249" top="195" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staAdress1Label" left="249" top="195" width="100" height="34" text="주소" cssclass="sta_labelbox"/>
+              <Edit id="edtAdress1" left="354" top="200" width="140" height="24" cssclass=""/>
+              <Static id="staAdress2Bg" left="0" top="228" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staAdress2Label" left="0" top="228" width="100" height="34" text="상세주소" cssclass="sta_labelbox"/>
+              <Edit id="edtAdress2" left="105" top="233" width="140" height="24" cssclass=""/>
+              <Static id="staMemoBg" left="249" top="228" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staMemoLabel" left="249" top="228" width="100" height="34" text="메모" cssclass="sta_labelbox"/>
+              <Edit id="edtMemo" left="354" top="233" width="140" height="24" cssclass=""/>
+              <Static id="staEmployeeStatusBg" left="0" top="261" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staEmployeeStatusLabel" left="0" top="261" width="100" height="34" text="재직여부" cssclass="sta_labelbox"/>
+              <Edit id="edtEmployeeStatus" left="105" top="266" width="140" height="24" cssclass=""/>
+              <Static id="staEmailBg" left="249" top="261" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staEmailLabel" left="249" top="261" width="100" height="34" text="이메일" cssclass="sta_labelbox"/>
+              <Edit id="edtEmail" left="354" top="266" width="140" height="24" cssclass=""/>
+              <Static id="staPhotoBg" left="0" top="294" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staPhotoLabel" left="0" top="294" width="100" height="34" text="사진" cssclass="sta_labelbox"/>
+              <Edit id="edtPhoto" left="105" top="299" width="140" height="24" cssclass=""/>
+              <Static id="staCareerlistBg" left="249" top="294" width="250" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staCareerlistLabel" left="249" top="294" width="100" height="34" text="이력사항" cssclass="sta_labelbox"/>
+              <Edit id="edtCareerlist" left="354" top="299" width="140" height="24" cssclass=""/>
+            </Layout>
+          </Layouts>
+          <Objects>
+            <Dataset id="viewdataset">
+              <ColumnInfo>
+                <Column id="EMPLOYEE_CODE" type="STRING" size="20" description="직원코드"/>
+                <Column id="EMPLOYEE_NAME" type="STRING" size="20" description="직원명"/>
+                <Column id="SEX" type="STRING" size="20" description="성별"/>
+                <Column id="DEPARTMENT" type="STRING" size="20" description="부서"/>
+                <Column id="POSITION" type="STRING" size="20" description="직급"/>
+                <Column id="GROUPS" type="STRING" size="20" description="구분(직무)"/>
+                <Column id="JOIN_DATE" type="STRING" size="20" description="입사일"/>
+                <Column id="BREAK_DATE" type="STRING" size="20" description="퇴사일"/>
+                <Column id="TELNUM" type="STRING" size="20" description="전화번호"/>
+                <Column id="PHONE" type="STRING" size="20" description="핸드폰번호"/>
+                <Column id="POSTAL_CODE" type="STRING" size="20" description="우편번호"/>
+                <Column id="ADRESS1" type="STRING" size="20" description="주소"/>
+                <Column id="ADRESS2" type="STRING" size="20" description="상세주소"/>
+                <Column id="MEMO" type="STRING" size="20" description="메모"/>
+                <Column id="EMPLOYEE_STATUS" type="STRING" size="20" description="재직여부"/>
+                <Column id="EMAIL" type="STRING" size="20" description="이메일"/>
+                <Column id="PHOTO" type="STRING" size="20" description="사진"/>
+                <Column id="CAREERLIST" type="STRING" size="20" description="이력사항"/>
+              </ColumnInfo>
+              <Rows>
+                <Row/>
+              </Rows>
+            </Dataset>
+          </Objects>
+          <Bind>
+            <BindItem id="bind_edtEmployeeCode" compid="edtEmployeeCode" propid="value" datasetid="viewdataset" columnid="EMPLOYEE_CODE"/>
+            <BindItem id="bind_edtEmployeeName" compid="edtEmployeeName" propid="value" datasetid="viewdataset" columnid="EMPLOYEE_NAME"/>
+            <BindItem id="bind_edtSex" compid="edtSex" propid="value" datasetid="viewdataset" columnid="SEX"/>
+            <BindItem id="bind_edtDepartment" compid="edtDepartment" propid="value" datasetid="viewdataset" columnid="DEPARTMENT"/>
+            <BindItem id="bind_edtPosition" compid="edtPosition" propid="value" datasetid="viewdataset" columnid="POSITION"/>
+            <BindItem id="bind_edtGroups" compid="edtGroups" propid="value" datasetid="viewdataset" columnid="GROUPS"/>
+            <BindItem id="bind_edtJoinDate" compid="edtJoinDate" propid="value" datasetid="viewdataset" columnid="JOIN_DATE"/>
+            <BindItem id="bind_edtBreakDate" compid="edtBreakDate" propid="value" datasetid="viewdataset" columnid="BREAK_DATE"/>
+            <BindItem id="bind_edtTelnum" compid="edtTelnum" propid="value" datasetid="viewdataset" columnid="TELNUM"/>
+            <BindItem id="bind_edtPhone" compid="edtPhone" propid="value" datasetid="viewdataset" columnid="PHONE"/>
+            <BindItem id="bind_edtPostalCode" compid="edtPostalCode" propid="value" datasetid="viewdataset" columnid="POSTAL_CODE"/>
+            <BindItem id="bind_edtAdress1" compid="edtAdress1" propid="value" datasetid="viewdataset" columnid="ADRESS1"/>
+            <BindItem id="bind_edtAdress2" compid="edtAdress2" propid="value" datasetid="viewdataset" columnid="ADRESS2"/>
+            <BindItem id="bind_edtMemo" compid="edtMemo" propid="value" datasetid="viewdataset" columnid="MEMO"/>
+            <BindItem id="bind_edtEmployeeStatus" compid="edtEmployeeStatus" propid="value" datasetid="viewdataset" columnid="EMPLOYEE_STATUS"/>
+            <BindItem id="bind_edtEmail" compid="edtEmail" propid="value" datasetid="viewdataset" columnid="EMAIL"/>
+            <BindItem id="bind_edtPhoto" compid="edtPhoto" propid="value" datasetid="viewdataset" columnid="PHOTO"/>
+            <BindItem id="bind_edtCareerlist" compid="edtCareerlist" propid="value" datasetid="viewdataset" columnid="CAREERLIST"/>
+          </Bind>
+          <InitValue/>
+        </View>
+        <Div id="divTop" taborder="4" text="Div00" left="10" top="0" height="52" width="1030" border="0px none,0px none,1px solid #dddddd">
+          <Layouts>
+            <Layout>
+              <Button id="btnAdd" taborder="0" text="신규" top="12" height="28" width="48" right="53" onclick="divTop_btnAdd_onclick"/>
+              <Button id="btnDel" taborder="1" text="삭제" top="12" height="28" width="48" right="106"/>
+              <Button id="btnSave" taborder="2" text="저장" top="12" height="28" enable="true" width="48" right="0"/>
+              <Button id="btnUpdate" taborder="3" text="수정" top="12" height="28" width="48" right="159"/>
+              <Static id="staNavi" taborder="4" text="상단메뉴 &gt; 2뎁스 메뉴 &gt; 업무화면 타이틀" top="14" width="270" height="24" left="0"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsEmployee">
+        <ColumnInfo>
+          <Column id="EMPLOYEE_CODE" type="STRING" size="20" description="직원코드"/>
+          <Column id="EMPLOYEE_NAME" type="STRING" size="20" description="직원명"/>
+          <Column id="SEX" type="STRING" size="20" description="성별"/>
+          <Column id="DEPARTMENT" type="STRING" size="20" description="부서"/>
+          <Column id="POSITION" type="STRING" size="20" description="직급"/>
+          <Column id="GROUPS" type="STRING" size="20" description="구분(직무)"/>
+          <Column id="JOIN_DATE" type="STRING" size="20" description="입사일"/>
+          <Column id="BREAK_DATE" type="STRING" size="20" description="퇴사일"/>
+          <Column id="TELNUM" type="STRING" size="20" description="전화번호"/>
+          <Column id="PHONE" type="STRING" size="20" description="핸드폰번호"/>
+          <Column id="POSTAL_CODE" type="STRING" size="20" description="우편번호"/>
+          <Column id="ADRESS1" type="STRING" size="20" description="주소"/>
+          <Column id="ADRESS2" type="STRING" size="20" description="상세주소"/>
+          <Column id="MEMO" type="STRING" size="20" description="메모"/>
+          <Column id="EMPLOYEE_STATUS" type="STRING" size="20" description="재직여부"/>
+          <Column id="EMAIL" type="STRING" size="20" description="이메일"/>
+          <Column id="PHOTO" type="STRING" size="20" description="사진"/>
+          <Column id="CAREERLIST" type="STRING" size="20" description="이력사항"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMPLOYEE_CODE">0202012101</Col>
+            <Col id="EMPLOYEE_NAME">윤두정</Col>
+            <Col id="SEX">M</Col>
+            <Col id="DEPARTMENT">인사팀</Col>
+            <Col id="POSITION">팀장</Col>
+            <Col id="GROUPS">팀장</Col>
+            <Col id="JOIN_DATE">20201210</Col>
+            <Col id="PHONE">01002220303</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="EMAIL">mrj.ng@toerp.com</Col>
+            <Col id="PHOTO">sea-1337565_960_7203.jpg</Col>
+            <Col id="CAREERLIST">앰지유통 5년 근무</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">10031801</Col>
+            <Col id="EMPLOYEE_NAME">박한나</Col>
+            <Col id="SEX">F</Col>
+            <Col id="DEPARTMENT">인사팀</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">수석</Col>
+            <Col id="JOIN_DATE">20100318</Col>
+            <Col id="PHONE">01066886868</Col>
+            <Col id="POSTAL_CODE">23023</Col>
+            <Col id="ADRESS1">인천 강화군 강화읍 갑룡길117번길 18</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="EMAIL">zz_na@toberp.com</Col>
+            <Col id="PHOTO">A002690172_01.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">18070401</Col>
+            <Col id="EMPLOYEE_NAME">김영민</Col>
+            <Col id="SEX">M</Col>
+            <Col id="DEPARTMENT">총무팀</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">수석</Col>
+            <Col id="JOIN_DATE">20180704</Col>
+            <Col id="TELNUM">01000000000</Col>
+            <Col id="PHONE">01049828282</Col>
+            <Col id="POSTAL_CODE">01044</Col>
+            <Col id="ADRESS1">서울 강북구 삼양로136길 6</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="EMAIL">mins@toberp.com</Col>
+            <Col id="PHOTO">team011.png</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">2013040401</Col>
+            <Col id="EMPLOYEE_NAME">강신우</Col>
+            <Col id="SEX">M</Col>
+            <Col id="DEPARTMENT">회계팀</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">수석</Col>
+            <Col id="JOIN_DATE">20130404</Col>
+            <Col id="PHONE">01078781234</Col>
+            <Col id="POSTAL_CODE">06120</Col>
+            <Col id="ADRESS1">서울 강남구 강남대로 480</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="EMAIL">sinw@toerp.com</Col>
+            <Col id="PHOTO">03.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">2014030701</Col>
+            <Col id="EMPLOYEE_NAME">정양식</Col>
+            <Col id="SEX">M</Col>
+            <Col id="DEPARTMENT">회계팀</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">책임</Col>
+            <Col id="JOIN_DATE">20140307</Col>
+            <Col id="TELNUM">0211542356 </Col>
+            <Col id="PHONE">01012140522</Col>
+            <Col id="POSTAL_CODE">63534</Col>
+            <Col id="ADRESS1">제주특별자치도 서귀포시 가가로 14</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="PHOTO">KakaoTalk_20200504_094049419_03.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">2020121601</Col>
+            <Col id="EMPLOYEE_NAME">주임지</Col>
+            <Col id="SEX">F</Col>
+            <Col id="DEPARTMENT">기술지원팀</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">선임</Col>
+            <Col id="JOIN_DATE">20201216</Col>
+            <Col id="PHONE">01052524545</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="PHOTO">블라인드컨투어드로잉.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">2020122901</Col>
+            <Col id="EMPLOYEE_NAME">최지원</Col>
+            <Col id="SEX">F</Col>
+            <Col id="DEPARTMENT">기술지원팀</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">선임</Col>
+            <Col id="JOIN_DATE">20201229</Col>
+            <Col id="PHONE">01088881111</Col>
+            <Col id="POSTAL_CODE">13536</Col>
+            <Col id="ADRESS1">경기 성남시 분당구 판교역로18번길 2</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">2024010101</Col>
+            <Col id="EMPLOYEE_NAME">홍길동</Col>
+            <Col id="SEX">F</Col>
+            <Col id="DEPARTMENT">연구소</Col>
+            <Col id="POSITION">팀장</Col>
+            <Col id="GROUPS">팀장</Col>
+            <Col id="JOIN_DATE">20240101</Col>
+            <Col id="PHONE">01088881111</Col>
+            <Col id="POSTAL_CODE">13536</Col>
+            <Col id="ADRESS1">경기 성남시 분당구 판교역로18번길 2</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">0202012101</Col>
+            <Col id="EMPLOYEE_NAME">홍길동</Col>
+            <Col id="SEX">M</Col>
+            <Col id="DEPARTMENT">연구소</Col>
+            <Col id="POSITION">팀장</Col>
+            <Col id="GROUPS">팀장</Col>
+            <Col id="JOIN_DATE">20201210</Col>
+            <Col id="PHONE">01002220303</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="EMAIL">mrj.ng@toerp.com</Col>
+            <Col id="PHOTO">sea-1337565_960_7203.jpg</Col>
+            <Col id="CAREERLIST">앰지유통 5년 근무</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">10031801</Col>
+            <Col id="EMPLOYEE_NAME">아무개</Col>
+            <Col id="SEX">F</Col>
+            <Col id="DEPARTMENT">연구소</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">수석</Col>
+            <Col id="JOIN_DATE">20100318</Col>
+            <Col id="PHONE">01066886868</Col>
+            <Col id="POSTAL_CODE">23023</Col>
+            <Col id="ADRESS1">인천 강화군 강화읍 갑룡길117번길 18</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="EMAIL">zz_na@toberp.com</Col>
+            <Col id="PHOTO">A002690172_01.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">18070401</Col>
+            <Col id="EMPLOYEE_NAME">김철수</Col>
+            <Col id="SEX">M</Col>
+            <Col id="DEPARTMENT">연구소</Col>
+            <Col id="POSITION">팀장</Col>
+            <Col id="GROUPS">팀장</Col>
+            <Col id="JOIN_DATE">20180704</Col>
+            <Col id="TELNUM">01000000000</Col>
+            <Col id="PHONE">01049828282</Col>
+            <Col id="POSTAL_CODE">01044</Col>
+            <Col id="ADRESS1">서울 강북구 삼양로136길 6</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="EMAIL">mins@toberp.com</Col>
+            <Col id="PHOTO">team011.png</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">2013040401</Col>
+            <Col id="EMPLOYEE_NAME">이영희</Col>
+            <Col id="SEX">M</Col>
+            <Col id="DEPARTMENT">연구소</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">책임</Col>
+            <Col id="JOIN_DATE">20130404</Col>
+            <Col id="PHONE">01078781234</Col>
+            <Col id="POSTAL_CODE">06120</Col>
+            <Col id="ADRESS1">서울 강남구 강남대로 480</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="EMAIL">sinw@toerp.com</Col>
+            <Col id="PHOTO">03.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">2014030701</Col>
+            <Col id="EMPLOYEE_NAME">왕경태</Col>
+            <Col id="SEX">M</Col>
+            <Col id="DEPARTMENT">기술지원팀</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">선임</Col>
+            <Col id="JOIN_DATE">20140307</Col>
+            <Col id="TELNUM">0211542356 </Col>
+            <Col id="PHONE">01012140522</Col>
+            <Col id="POSTAL_CODE">63534</Col>
+            <Col id="ADRESS1">제주특별자치도 서귀포시 가가로 14</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="PHOTO">KakaoTalk_20200504_094049419_03.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">2020121601</Col>
+            <Col id="EMPLOYEE_NAME">고은애</Col>
+            <Col id="SEX">F</Col>
+            <Col id="DEPARTMENT">기술지원팀</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">선임</Col>
+            <Col id="JOIN_DATE">20201216</Col>
+            <Col id="PHONE">01052524545</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="PHOTO">블라인드컨투어드로잉.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">2020122901</Col>
+            <Col id="EMPLOYEE_NAME">고길동</Col>
+            <Col id="SEX">F</Col>
+            <Col id="DEPARTMENT">연구소</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">수석</Col>
+            <Col id="JOIN_DATE">20201229</Col>
+            <Col id="PHONE">01088881111</Col>
+            <Col id="POSTAL_CODE">13536</Col>
+            <Col id="ADRESS1">경기 성남시 분당구 판교역로18번길 2</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">2024010101</Col>
+            <Col id="EMPLOYEE_NAME">전수지</Col>
+            <Col id="SEX">F</Col>
+            <Col id="DEPARTMENT">연구소</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">수석</Col>
+            <Col id="JOIN_DATE">20240101</Col>
+            <Col id="PHONE">01088881111</Col>
+            <Col id="POSTAL_CODE">13536</Col>
+            <Col id="ADRESS1">경기 성남시 분당구 판교역로18번길 2</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">0202012101</Col>
+            <Col id="EMPLOYEE_NAME">오도진</Col>
+            <Col id="SEX">M</Col>
+            <Col id="DEPARTMENT">연구소</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">책임</Col>
+            <Col id="JOIN_DATE">20201210</Col>
+            <Col id="PHONE">01002220303</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="EMAIL">mrj.ng@toerp.com</Col>
+            <Col id="PHOTO">sea-1337565_960_7203.jpg</Col>
+            <Col id="CAREERLIST">앰지유통 5년 근무</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">10031801</Col>
+            <Col id="EMPLOYEE_NAME">안해영</Col>
+            <Col id="SEX">F</Col>
+            <Col id="DEPARTMENT">연구소</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">선임</Col>
+            <Col id="JOIN_DATE">20100318</Col>
+            <Col id="PHONE">01066886868</Col>
+            <Col id="POSTAL_CODE">23023</Col>
+            <Col id="ADRESS1">인천 강화군 강화읍 갑룡길117번길 18</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="EMAIL">zz_na@toberp.com</Col>
+            <Col id="PHOTO">A002690172_01.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">18070401</Col>
+            <Col id="EMPLOYEE_NAME">표보아</Col>
+            <Col id="SEX">M</Col>
+            <Col id="DEPARTMENT">기술지원팀</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">선임</Col>
+            <Col id="JOIN_DATE">20180704</Col>
+            <Col id="TELNUM">01000000000</Col>
+            <Col id="PHONE">01049828282</Col>
+            <Col id="POSTAL_CODE">01044</Col>
+            <Col id="ADRESS1">서울 강북구 삼양로136길 6</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="EMAIL">mins@toberp.com</Col>
+            <Col id="PHOTO">team011.png</Col>
+          </Row>
+          <Row>
+            <Col id="EMPLOYEE_CODE">2013040401</Col>
+            <Col id="EMPLOYEE_NAME">양종호</Col>
+            <Col id="SEX">M</Col>
+            <Col id="DEPARTMENT">기술지원팀</Col>
+            <Col id="POSITION">팀원</Col>
+            <Col id="GROUPS">수석</Col>
+            <Col id="JOIN_DATE">20130404</Col>
+            <Col id="PHONE">01078781234</Col>
+            <Col id="POSTAL_CODE">06120</Col>
+            <Col id="ADRESS1">서울 강남구 강남대로 480</Col>
+            <Col id="EMPLOYEE_STATUS">st001</Col>
+            <Col id="EMAIL">sinw@toerp.com</Col>
+            <Col id="PHOTO">03.jpg</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[// New Button Clicked
+this.divTop_btnAdd_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objApp = nexacro.getApplication();
+
+	var bTitle = true;
+	var sTitle = "New Employee";
+	var bAutoSize = false;
+	var sOpenAlignType = "";
+	var sFormUrl = "FrameBase::Employee_New.xfdl";
+	
+	//
+	var nLeft = -1, nTop = -1;
+	var nWidth = 700, nHeight = 450;
+	if(nLeft == -1 && nTop == -1) 
+	{		
+		sOpenAlignType = "center middle";
+		
+		if (system.navigatorname == "nexacro") {
+			var curX = system.clientToScreenX(objApp.mainframe, 0);
+			var curY = system.clientToScreenY(objApp.mainframe, 0);
+		}else{
+			var curX = window.screenLeft;
+			var curY = window.screenTop;
+		}
+		
+		nLeft	= curX + (objApp.mainframe.width / 2) - Math.round(nWidth / 2);
+		nTop	= curY + (objApp.mainframe.height / 2) - Math.round(nHeight / 2) ;		
+	}else{
+		nLeft	=  this.parent.getOffsetLeft() + nLeft;
+		nTop	=  this.parent.getOffsetTop() + nTop;
+	}
+	//
+	
+	var objOwnerFrame = this.getOwnerFrame();	
+	var newChild = new nexacro.ChildFrame;		
+	newChild.init("new_popup", nLeft, nTop, nWidth, nHeight, null, null, sFormUrl);
+	
+	//newChild.set_dragmovetype("none");
+	newChild.set_showtitlebar(bTitle);
+	newChild.set_autosize(bAutoSize);	
+	newChild.set_resizable(false);			//resizable 안됨
+	newChild.set_titletext(sTitle);
+	newChild.set_showstatusbar(false);		//statusbar는 안보임
+	newChild.set_openalign(sOpenAlignType);
+	
+	newChild.showModal(objOwnerFrame, null, this);
+};
+
+// Search Button Clicked
+this.Search_btnSearch_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Master.form.viewdataset.copyData(this.dsEmployee);
+	// this.Detail.form.viewdataset.copyData(this.Master.form.viewdataset);
+};
+
+// Selection Changed
+this.Master_grdList_onselectchanged = function(obj:nexacro.Grid,e:nexacro.GridSelectEventInfo)
+{
+	
+};
+]]></Script>
+    <Trigger/>
+  </Form>
+</FDL>
