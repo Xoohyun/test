@@ -37,7 +37,7 @@
               <Static id="staBreakDateBg" left="334" top="129" width="335" height="34" cssclass="sta_fieldbox"/>
               <Static id="staBreakDateLabel" left="334" top="129" width="100" height="34" text="퇴사일" cssclass="sta_labelbox"/>
               <Edit id="edtBreakDate" left="439" top="134" width="225" height="24" cssclass=""/>
-              <Static id="staTelnumBg" left="0" top="162" width="335" height="34" cssclass="sta_fieldbox"/>
+              <Static id="staTelnumBg" left="63" top="116" width="335" height="34" cssclass="sta_fieldbox"/>
               <Static id="staTelnumLabel" left="0" top="162" width="100" height="34" text="전화번호" cssclass="sta_labelbox"/>
               <Edit id="edtTelnum" left="288" top="160" width="225" height="24" cssclass=""/>
               <Static id="staPhoneBg" left="334" top="162" width="335" height="34" cssclass="sta_fieldbox"/>
