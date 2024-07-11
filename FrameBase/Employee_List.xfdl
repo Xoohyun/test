@@ -39,7 +39,7 @@
                   </Layout>
                 </Layouts>
               </Div>
-              <Grid id="grdList" left="65" top="31" right="-65" bottom="119" binddataset="viewdataset" autofittype="none">
+              <Grid id="grdList" left="190" top="41" right="-190" bottom="109" binddataset="viewdataset" autofittype="none">
                 <Formats>
                   <Format id="default">
                     <Columns>

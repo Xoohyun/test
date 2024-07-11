@@ -39,7 +39,7 @@
               <Edit id="edtBreakDate" left="439" top="134" width="225" height="24" cssclass=""/>
               <Static id="staTelnumBg" left="0" top="162" width="335" height="34" cssclass="sta_fieldbox"/>
               <Static id="staTelnumLabel" left="0" top="162" width="100" height="34" text="전화번호" cssclass="sta_labelbox"/>
-              <Edit id="edtTelnum" left="105" top="167" width="225" height="24" cssclass=""/>
+              <Edit id="edtTelnum" left="288" top="160" width="225" height="24" cssclass=""/>
               <Static id="staPhoneBg" left="334" top="162" width="335" height="34" cssclass="sta_fieldbox"/>
               <Static id="staPhoneLabel" left="334" top="162" width="100" height="34" text="핸드폰번호" cssclass="sta_labelbox"/>
               <Edit id="edtPhone" left="439" top="167" width="225" height="24" cssclass=""/>
